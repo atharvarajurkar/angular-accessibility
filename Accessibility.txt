@@ -1,0 +1,49 @@
+What is Accessibility in web development?
+When someone describes a site as "accessible", they mean that any user can use all its features and content, regardless of how the user accesses the web — even and especially users with physical or mental impairments.
+Sites should be accessible to keyboard, mouse, and touch screen users, and any other way users access the web, including screen readers and voice assistants.
+Applications should be understandable and usable by people regardless of auditory, visual, physical, or cognitive abilities.
+
+Web Content Accessibility Guidelines WCAG:
+The WCAG guidelines are a set of recommendations for making web content more accessible developed by W3C's WAI, primarily for people with disabilities — but also for all user agents.
+
+The four principles
+WCAG is broadly broken down into four principles — major things that web content must be to be considered accessible:
+
+Perceivable: Users must be able to perceive it in some way, using one or more of their senses.
+Operable: Users must be able to control UI elements (e.g. buttons must be clickable in some way — mouse, keyboard, voice command, etc.).
+Understandable: The content must be understandable to its users.
+Robust: The content must be developed using well-adopted web standards that will work across different browsers, now and in the future.
+
+
+What is ARIA?
+ARIA is shorthand for Accessible Rich Internet Applications. ARIA is a set of attributes you can add to HTML elements that define ways to make web content and applications accessible to users with disabilities who use assistive technologies (AT). When accessibility issues cannot be managed with native HTML, ARIA can help bridge those gaps.
+
+
+There are three main components used in ARIA: Roles, States, and Properties.
+
+Roles
+Roles are used to define a type of user interface (UI) element (i.e. role=“ROLE_NAME”). Once a role is set for an element, it does not change.
+
+Abstract roles
+Brief Description: While acting as the foundation for all other roles, abstract roles are utilized by browsers and should not be used in code. Instead, they are used to give roles their meaning in context and help with the addition of new roles.
+
+How does it get used by the user? Abstract roles are in the background and shouldn’t be adjusted.
+
+Document structure roles
+Brief Description: Document structure roles aren’t normally interactive, but instead provide descriptions for sections within a page.
+Commonly used examples: Examples include img, document, heading, list, listitem, and toolbar (i.e. role=“toolbar”). You can see a full list on the W3C’s ARIA 5.3.3 Document Structure Roles page.
+
+How does it get used by the user? Users of AT use document structure roles to identify content while navigating through a page, which helps give them the context of the content they’re taking in. While HTML 5 may provide much of this context on its own, screen reader support for HTML 5 is sometimes missing. For this reason, the most robust choice is to use both.
+
+Landmark roles
+Brief Description: Created for easier navigation, landmark roles identify each section of content within a page.
+
+Commonly used examples: Examples include banner, contentinfo, form, main, navigation, search (i.e. role=“search”).
+How does it get used by the user? Users of AT use landmark roles to navigate through a page. For instance, a screen reader will announce the start and end of each landmark role set on a page, and its web rotor (i) will display a list of these roles/regions.
+
+
+Widget roles
+Brief Description: Used when HTML doesn’t define elements, widget roles add semantic meaning to elements and user interfaces (UIs), small and large. Standalone UI widgets are part of larger, composite widgets, while composite UI widgets act as containers that manage other contained widgets.
+Commonly used examples: Examples of standalone UI widgets include alert, button, checkbox, link, menuitem, tab, and tabpanel (i.e. role=“tabpanel”). Commonly used examples of composite UI widgets include combobox, grid, listbox, menu, radiogroup, and tablist (i.e. role=“tablist”).
+How does it get used by the user? Users of AT use widget roles to interact with the page to get things done. This can include completing forms, opening and closing tabs and panels, and navigating a main or sidebar menu.
+

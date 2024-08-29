@@ -21,11 +21,11 @@ import { ShopComponent } from './shop/shop.component';
 
 // TODO: #4. Define unique page titles
 const routes: Routes = [
-  { path: 'shop', component: ShopComponent },
-  { path: 'about', component: AboutComponent },
-  { path: 'locate', component: LocationComponent },
-  { path: '',   redirectTo: '/shop', pathMatch: 'full' },
-  { path: '**', component: ShopComponent },
+  { path: 'shop', component: ShopComponent, title:'Shop Dumplings Page' },
+  { path: 'about', component: AboutComponent, title:'About Us Page' },
+  { path: 'locate', component: LocationComponent, title:'Locate Us Page' },
+  { path: '',   redirectTo: '/shop', pathMatch: 'full', title:'Shop Dumplings Page' },
+  { path: '**', component: ShopComponent, title:'Shop Dumplings Page' },
 ];
 
 @NgModule({

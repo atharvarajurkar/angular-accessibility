@@ -37,6 +37,7 @@ export class NavigationComponent implements OnInit {
   }
 
   setTheme(): void {
+    console.log(document,document.documentElement,document.documentElement.classList);
     document.documentElement.classList.toggle('dark-theme', this.isDark);
     this.overlayContainer.getContainerElement().classList.toggle('dark-theme', this.isDark);
   }
